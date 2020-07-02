@@ -1,0 +1,29 @@
+TITLE Question #2 HW6	(main.asm)
+
+INCLUDE Irvine32.inc
+
+.data
+
+	PromptUser BYTE "Please enter a value: ",0 ; ,0dh,0ah,0
+
+.code
+main PROC
+
+	mov edx, OFFSET PromptUser
+	mov ecx, 5
+L1:
+	call WriteString
+	call ReadInt
+	push eax
+	loop L1
+
+	mov ecx, 5
+L2:
+	pop eax
+	call WriteInt
+	call Crlf
+	loop L2
+
+exit
+main ENDP
+END main

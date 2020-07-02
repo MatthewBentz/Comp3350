@@ -1,0 +1,40 @@
+TITLE Question #1 HW6 	(main.asm)
+
+INCLUDE Irvine32.inc
+
+.data
+
+	message BYTE "War Eagle",0
+
+.code
+;--------------------------
+DisplayTiger PROC
+;
+; Receives: BX as 0 or 1 for Orange and Blue text color
+; Returns: Displays the string "War Eagle" in Blue if BX is 0 or Orange if BX is 1
+; Requires: BX to be defined as 0, 1, or 2.
+;--------------------------
+
+	mov eax,9Fh ; Set blue as default
+
+	cmp bx,0  ; bx > 0?
+	jg B 	  ; Yes: keep text blue
+	jng O 	  ; No: make text orange
+O: 	mov eax,white+(lightRed*16)
+B:	
+	call SetTextColor
+
+	mov edx, OFFSET message
+	call WriteString
+
+	ret
+DisplayTiger ENDP
+
+main PROC
+
+	mov bx,0
+	call DisplayTiger
+
+exit
+main ENDP
+END main

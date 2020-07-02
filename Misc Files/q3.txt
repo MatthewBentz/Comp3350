@@ -1,0 +1,70 @@
+TITLE Question #3 HW6              (main.asm)
+
+INCLUDE Irvine32.inc
+
+.data
+
+	prompt      BYTE "Please input a value: ", 0
+	spacing     BYTE ", ",0
+	String1     BYTE "The target value is ", 0
+	String2     BYTE "and is located at index: ",0
+
+.code
+
+Search PROC
+
+	mov edx, OFFSET prompt		; Prompts for value
+	call WriteString
+	call ReadInt				; stores input in eax
+
+	mov ecx, 6					; loop counter
+	mov ebx, 0					; 
+L1:
+	cmp WORD PTR [esp+ebx],ax	; WORD at ToS = ax?
+	je  found					; jump to "found" if equal
+	add ebx,4					; point to the next item in stack
+	loop L1
+	jmp notFound				; if not found, jump to "notFound"
+
+found:
+	mov edx, OFFSET String1		;
+	call WriteString			;
+	call WriteInt				; print value is : eax
+
+	mov edx, OFFSET spacing		;
+	call WriteString			; print spacing
+
+	mov edx, OFFSET String2		;
+	call WriteString			;
+	sub ecx,6					; sub loop counter by 6
+	neg ecx						; get absolute value
+	mov eax, ecx				; move into eax
+	call WriteInt				; print index is : eax
+
+	jmp quit					; skip "notFound"
+
+notFound:
+	mov eax, 0					; if not found, print 0
+	call Writeint
+
+quit:
+	call Crlf					; carriage return
+
+ret
+Search ENDP
+
+main PROC   
+	
+	push -5
+	push -6
+	push -1
+	push -10
+	push -44
+	push -79
+
+	call Search
+
+exit
+main ENDP
+END main
+
