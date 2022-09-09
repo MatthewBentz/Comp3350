@@ -1,9 +1,4 @@
-# Comp3350
-Comp Org and Assembly Language Programming with Dr. Baskiyar at Auburn University
 
-Programmed in Visual Studio using the Irvine library
-
-```
     Total Views per Day from 2022-09-08 to 2022-09-09
 
     Repository Views
@@ -26,8 +21,3 @@ Programmed in Visual Studio using the Irvine library
 
     Chart last updated - Fri Sep  9 00:42:51 2022 UTC
     
-```
-
----
-
-> RepoStats by [Wumphlett](https://github.com/Wumphlett)
