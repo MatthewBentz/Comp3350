@@ -4,7 +4,7 @@ Comp Org and Assembly Language Programming with Dr. Baskiyar at Auburn Universit
 Programmed in Visual Studio using the Irvine library
 
 ```
-    Total Views per Day from 2022-09-08 to 2022-10-09
+    Total Views per Day from 2022-09-08 to 2022-10-10
 
     Repository Views
    19.00  ┼              ╭╮
@@ -22,9 +22,9 @@ Programmed in Visual Studio using the Irvine library
     3.80  ┤╰╮  │  │  ││││││ ││          ││
     2.53  ┤ ╰─╮│  ╰╮╭╯││││╰╮││  ╭╮ ╭╮ ╭╮││
     1.27  ┤   ││   ││ ││││ │││  ││ ││ ││││
-    0.00  ┤   ╰╯   ╰╯ ╰╯╰╯ ╰╯╰──╯╰─╯╰─╯╰╯╰
+    0.00  ┤   ╰╯   ╰╯ ╰╯╰╯ ╰╯╰──╯╰─╯╰─╯╰╯╰─
 
-    Chart last updated - Sun Oct  9 00:45:08 2022 UTC
+    Chart last updated - Mon Oct 10 00:52:50 2022 UTC
     
 ```
 
